@@ -16,9 +16,9 @@ int main() {
     printf("main: %p\n", (void*)main);
 
     // Comprobar orden de almacenamiento del array 3D
-    for (int i = 0; i < 1; i++)
-        for (int j = 0; j < 1; j++)
-            for (int k = 0; k < 3; k++)
+    for (int i = 0; i < 2; i++)
+        for (int j = 0; j < 2; j++)
+            for (int k = 0; k < 2; k++)
                 printf("local_array[%d][%d][%d] en %p\n", i, j, k, (void*)&local_array[i][j][k]);
 
     printf("PID del proceso: %d\n", getpid());

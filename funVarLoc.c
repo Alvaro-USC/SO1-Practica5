@@ -16,6 +16,8 @@ int main() {
     f1(val);
     f2(val);
     printf("main: %p\n", (void*)main);
+    printf("f1: %p\n", (void*)f1);
+    printf("f2: %p\n", (void*)f2);
     printf("PID: %d\n", getpid());
     getchar();
     return 0;
