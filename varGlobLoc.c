@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 int global_var = 10;          // Variable global
 int global_array[5] = {1,2,3,4,5}; // Array global
@@ -18,7 +19,7 @@ int main() {
     for (int i = 0; i < 1; i++)
         for (int j = 0; j < 1; j++)
             for (int k = 0; k < 3; k++)
-                printf("local_array[0][0][%d] en %p\n", k, (void*)&local_array[0][0][k]);
+                printf("local_array[%d][%d][%d] en %p\n", i, j, k, (void*)&local_array[i][j][k]);
 
     printf("PID del proceso: %d\n", getpid());
     printf("Pulse Enter para continuar...\n");
